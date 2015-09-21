@@ -75,11 +75,24 @@ public class MainActivity extends ActionBarActivity {
     //constantes
 
 
-    public  final static String ORIGEM = "br.usjt.ORIGEM";
-    public  final static String DESTINO = "br.usjt.DESTINO";
+    public  final static String ORIGEM = "aereo.usjt.br.aereo.ORIGEM";
+    public  final static String DESTINO = "aereo.usjt.br.aereo.DESTINO";
+    public  final static String MODO = "aereo.usjt.br.aereo.MODO";
+    public  final static String SIMPLES = "aereo.usjt.br.aereo.SIMPLES";
+    public  final static String COMPLETO = "aereo.usjt.br.aereo.COMPLETO";
 
     // metodo chamado para consultar ao clicar
-public void consultarVoos(View view) {
+
+    public void ConsultarVoosSimples(View view){
+        consultarVoos(view, SIMPLES);
+    }
+
+    public void ConsultarVoosCompleto(View view){
+        consultarVoos(view, COMPLETO);
+    }
+
+
+public void consultarVoos(View view, String modo) {
     String pOrigem = this.origem.equals("Selecione o Voo de Origem") ? "" : origem;
     String pDestino = this.destino.equals("Selecione o Voo de Destino") ? "" : destino;
 
@@ -88,7 +101,7 @@ public void consultarVoos(View view) {
 
     intent.putExtra(ORIGEM, pOrigem);
     intent.putExtra(DESTINO, pDestino);
-
+    intent.putExtra(MODO, modo);
     startActivity(intent);
 
 }

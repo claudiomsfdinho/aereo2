@@ -17,8 +17,9 @@ public class Voo implements Comparable<Voo>{
         private String data;
         private String aeronave;
         private String situacao;
+    private String imagem;
 
-        public Voo(String nome , String origem, String destino, int qtdeEscalas, String aeronave, String situacao, Double valor)
+        public Voo(String nome , String origem, String destino, int qtdeEscalas, String aeronave, String situacao, Double valor, String imagem)
         {
 
             //setDados( "" );
@@ -29,6 +30,7 @@ public class Voo implements Comparable<Voo>{
             this.aeronave = aeronave;
             this.situacao = situacao;
             this.valor = valor;
+            this.imagem = imagem;
         }
 
         public String getDados()
@@ -42,11 +44,19 @@ public class Voo implements Comparable<Voo>{
             return nome;
         }
 
+    public int getQtdeEscalas()
+    {
+        return qtdeEscalas;
+    }
+
         public String getOrigem()
         {
             return origem;
         }
-
+    public double getValor()
+    {
+        return valor;
+    }
         public String getDestino()
         {
             return destino;
@@ -57,6 +67,7 @@ public class Voo implements Comparable<Voo>{
             return data;
         }
 
+    public String getImagem() {return imagem;}
 
         public String getSituacao()
         {

@@ -87,8 +87,8 @@ public class Controle {
 
         private static ArrayList<Voo> cadastroDeVoos(){
             ArrayList<Voo> voos = new ArrayList<Voo>();
-            voos.add(new Voo("70BRACA/BRAS", "Aeroporto Internacional de Viracopos/Campinas","Aeroporto Internacional de BrasÃ­lia - Presidente Juscelino Kubitschek", 3,"Airbus300", "Atrasado", 490.5));
-            voos.add(new Voo("455PORTA/ALAG","Aeroporto Internacional de Porto Alegre - Salgado Filho","Aeroporto Internacional de MaceiÃ³ - Zumbi dos Palmares", 3,"Airbus300", "Atrasado", 490.5));
+            voos.add(new Voo("70CA/BRAS", "Aeroporto Internacional de Viracopos/Campinas","Aeroporto Internacional de BrasÃ­lia - Presidente Juscelino Kubitschek", 3,"Airbus300", "Atrasado", 490.5, "bandeira001"));
+            voos.add(new Voo("455PA/ALAG","Aeroporto Internacional de Porto Alegre - Salgado Filho","Aeroporto Internacional de MaceiÃ³ - Zumbi dos Palmares", 3,"Airbus300", "Atrasado", 490.5, "bandeira002"));
 
 
 

@@ -74,8 +74,24 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceButton"
                 android:text="@string/botao_consultar"
-                android:onClick="consultarVoos"
+                android:onClick="ConsultarVoosSimples"
                 android:id="@+id/botao_consultar"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceButton"
+                android:text="@string/botao_consultar2"
+                android:onClick="ConsultarVoosCompleto"
+                android:id="@+id/botao_conultar2"/>
 
         </LinearLayout>
 

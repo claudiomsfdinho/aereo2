@@ -20,6 +20,10 @@
             android:name=".VooActivity"
             android:label="@string/title_activity_lista_voo" >
         </activity>
+        <activity
+            android:name=".CompletoVooActivity"
+            android:label="@string/title_activity_completo_voo" >
+        </activity>
     </application>
 
 </manifest>

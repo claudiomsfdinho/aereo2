@@ -1,18 +1,28 @@
 package aereo.usjt.br.aereo;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
+import android.widget.ListView;
 
-import java.util.TreeSet;
+import java.io.Serializable;
 
 public class VooActivity extends ActionBarActivity {
+ListView listView;
+    Activity atividade;
+    public final static String VOO = "aereo.usjt.br.aereo.VOO";
+    Voo[] voos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_voo);
+        atividade = this;
 
         Controle controle = new Controle();
         //capturando a msg do intent
@@ -20,32 +30,46 @@ public class VooActivity extends ActionBarActivity {
         Intent intent = getIntent();
         String destino = intent.getStringExtra(MainActivity.DESTINO);
         String origem = intent.getStringExtra(MainActivity.ORIGEM);
+        String modo = intent.getStringExtra(MainActivity.MODO);
 
+        voos = controle.listarVoos(destino, origem).toArray(new Voo[0]);
+        String[] lista = null;
 
-        TreeSet<Voo> lista = controle.listarVoos(origem, destino);
+        if(modo.equals(MainActivity.SIMPLES)) {
+            lista = new String[voos.length];
 
-        // texto da View
-        TextView textView = (TextView) findViewById(R.id.txt_lista_voo);
-        String message = "";
-
-        for (Voo voo : lista) {
-            message += voo.getNome()  + "" + voo.getSituacao() +  "\n";
+            for (int i = 0; i < voos.length; i++) {
+                lista[i] = voos[i].getNome();
+            }
         }
-
-        if (message.length() == 0) {
-
-
-            message = "Voo não encontrado";
-
-            textView.setLines(3);
+        //cria a lista de voos
+        listView = (ListView) findViewById(R.id.view_lista_voo);
+        BaseAdapter adapter;
+        if(modo.equals(MainActivity.SIMPLES)) {
+            adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, lista);
         } else {
-            textView.setLines(lista.size());
-
+            adapter = new VooAdapter(this, voos);
         }
+        listView.setAdapter(adapter);
+
+        // listener de click em um item do listView
 
 
-        textView.setText(message);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+
+                // manda para a tela de detalhe
+                Intent intent = new Intent(atividade, CompletoVooActivity.class);
+                intent.putExtra(VOO, (Serializable) voos[position]);
+
+                startActivity(intent);
+
+            }
+
+        });
     }
-
 
 }
