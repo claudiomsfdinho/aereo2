@@ -28,8 +28,6 @@ public class VooAdapter  extends BaseAdapter implements SectionIndexer
 
     public VooAdapter(Activity context, Voo[] voos ){
 
-
-
         this.context= context;
         this.voos = voos;
         sectionHeaders = SectionIndexBuilder.BuildSectionHeaders(voos);

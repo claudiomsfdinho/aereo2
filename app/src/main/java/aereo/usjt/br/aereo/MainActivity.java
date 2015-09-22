@@ -22,10 +22,10 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        config();
+        setupViews();
     }
 
-    private void config(){
+    private void setupViews(){
         destino = "";
         origem = "";
         bntBuscar = (Button) findViewById(R.id.botao_consultar);

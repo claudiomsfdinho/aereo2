@@ -1,9 +1,11 @@
 package aereo.usjt.br.aereo;
 
+import java.io.Serializable;
+
 /**
  * Created by Claudio Miranda on 12/09/2015.
  */
-public class Voo implements Comparable<Voo>{
+public class Voo implements Comparable<Voo>, Serializable {
 
 
 
@@ -17,7 +19,8 @@ public class Voo implements Comparable<Voo>{
         private String data;
         private String aeronave;
         private String situacao;
-    private String imagem;
+        private String imagem;
+        public static final String NAO_ENCONTRADO = "Não encontrado.";
 
         public Voo(String nome , String origem, String destino, int qtdeEscalas, String aeronave, String situacao, Double valor, String imagem)
         {
@@ -90,7 +93,7 @@ public class Voo implements Comparable<Voo>{
 
         @Override
         public String toString() {
-            return "br.usjt.aereo.Voo{" +
+            return "aereo.br.usjt.aereo.Voo{" +
 
                     "nome='" + nome + '\'' +
                     ", destino='" + destino + '\'' +

@@ -5,6 +5,7 @@ android:layout_width="fill_parent"
 android:layout_height="fill_parent"
 android:minWidth="25px"
 android:minHeight="25px"
+    android:background="#ffa82f"
 android:paddingBottom="4dp">
 <ImageView
     android:id="@+id/imagemVImageView"
@@ -16,7 +17,7 @@ android:paddingBottom="4dp">
 <TextView
     android:id="@+id/nomeVooTextView"
     android:layout_toRightOf="@id/imagemVImageView"
-    android:text="Nome"
+    android:text="--nome--"
     android:textAppearance="?android:attr/textAppearanceLarge"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -25,7 +26,7 @@ android:paddingBottom="4dp">
     android:id="@+id/detalhesVooTextView"
     android:layout_toRightOf="@id/imagemVImageView"
     android:layout_below="@id/nomeVooTextView"
-    android:text="Completo"
+    android:text="--speciality--"
     android:textAppearance="?android:attr/textAppearanceSmall"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"

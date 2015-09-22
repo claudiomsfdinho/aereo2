@@ -12,8 +12,8 @@ import android.widget.ListView;
 
 import java.io.Serializable;
 
-public class VooActivity extends ActionBarActivity {
-ListView listView;
+ public class VooActivity extends ActionBarActivity {
+     ListView listView;
     Activity atividade;
     public final static String VOO = "aereo.usjt.br.aereo.VOO";
     Voo[] voos;

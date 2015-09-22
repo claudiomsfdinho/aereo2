@@ -49,7 +49,7 @@
 
     <string-array name="Origem">
 
-        <item>Selecione o Destino</item>
+        <item>Selecione a Origem</item>
         <item>Aeroporto Internacional de Viracopos/Campinas</item>
         <item> Aeroporto Internacional de SÃ£o JosÃ© dos Campos - Professor Urbano Ernesto Stumpf</item>
         <item>  Aeroporto Internacional de SÃ£o Paulo/Guarulhos - Governador AndrÃ© Franco Montoro</item>
@@ -87,6 +87,6 @@
 
     <string name="txt_lista">Nenhum voo</string>
 
-    <string name="title_activity_completo_voo">Voo Escolhido</string>
+    <string name="title_activity_detalhe_voo">Voo Escolhido</string>
 
 </resources>

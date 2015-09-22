@@ -26,14 +26,13 @@ public class Controle {
         public TreeSet<Voo> listarVoos(String destino, String origem) {
             TreeSet<Voo> voos = new TreeSet<Voo>();
 
-
-
             if (destino.length() > 0 && origem.length() > 0) {
                 voos = buscarDestinoOrigem(destino, origem);
-            } else if (destino.length() > 0) {
-                voos = buscarDestino(destino);
-            } else if (origem.length() > 0) {
+            }  else if (origem.length() > 0) {
                 voos = buscarOrigem(origem);
+            }
+                else if (destino.length() > 0) {
+                    voos = buscarDestino(destino);
 
             } else {
                 voos = todos();
@@ -42,15 +41,6 @@ public class Controle {
             return voos;
         }
 
-         private TreeSet<Voo> buscarDestino(String destino) {
-            TreeSet<Voo> lista = new TreeSet<Voo>();
-            for (Voo voo : voos) {
-                if (destino.equals(voo.getDestino())) {
-                    lista.add(voo);
-                }
-            }
-            return lista;
-        }
 
 
         private TreeSet<Voo> buscarOrigem(String origem) {
@@ -64,7 +54,19 @@ public class Controle {
         }
 
 
-        private TreeSet<Voo> buscarDestinoOrigem(String destino, String origem) {
+    private TreeSet<Voo> buscarDestino(String destino) {
+        TreeSet<Voo> lista = new TreeSet<Voo>();
+        for (Voo voo : voos) {
+            if (destino.equals(voo.getDestino())) {
+                lista.add(voo);
+            }
+        }
+        return lista;
+    }
+
+
+
+    private TreeSet<Voo> buscarDestinoOrigem(String destino, String origem) {
             TreeSet<Voo> lista = new TreeSet<Voo>();
             for (Voo voo : voos) {
                 if (destino.equals(voo.getDestino())
