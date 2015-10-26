@@ -1,4 +1,4 @@
-package aereo.usjt.br.aereo;
+package aereo.usjt.br.aereo.model;
 
 import java.io.Serializable;
 

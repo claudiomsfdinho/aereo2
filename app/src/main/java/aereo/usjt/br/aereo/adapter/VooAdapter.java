@@ -1,4 +1,4 @@
-package aereo.usjt.br.aereo;
+package aereo.usjt.br.aereo.adapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -14,6 +14,11 @@ import android.widget.TextView;
 import java.text.NumberFormat;
 import java.util.Hashtable;
 import java.util.Locale;
+
+import aereo.usjt.br.aereo.R;
+import aereo.usjt.br.aereo.Util.Util;
+import aereo.usjt.br.aereo.Util.ViewHolder;
+import aereo.usjt.br.aereo.model.Voo;
 
 /**
  * Created by Claudio Miranda on 19/09/2015.

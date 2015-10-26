@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Claudio Miranda\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="C:\Users\Claudio Miranda\Aereo\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-7047f0496fef5db89d58993d3c7b70184a6ebbd6.jar" />
+    </item>
+    <item
+        jar="C:\Users\Claudio Miranda\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.6.0\98476622f10715998eacf9240d6b479f12c66143\okio-1.6.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="C:\Users\Claudio Miranda\Aereo\app\build\intermediates\pre-dexed\debug\okio-1.6.0-aa0c415b9cd293bec235a4eedede30593acb5a7f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Claudio Miranda\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp\okhttp\2.5.0\4de2b4ed3445c37ec1720a7d214712e845a24636\okhttp-2.5.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="4de2b4ed3445c37ec1720a7d214712e845a24636">
+        <dex dex="C:\Users\Claudio Miranda\Aereo\app\build\intermediates\pre-dexed\debug\okhttp-2.5.0-cc0839ad9a3d55279b06dca801916b79800d65a3.jar" />
+    </item>
+    <item
+        jar="C:\Users\Claudio Miranda\Aereo\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\Claudio Miranda\Aereo\app\build\intermediates\pre-dexed\debug\classes-6ba97a48b5d974c3de1942e65857586d8787d237.jar" />
+    </item>
+    <item
+        jar="C:\Users\Claudio Miranda\Aereo\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\Claudio Miranda\Aereo\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-7bc3011ce92135160653a81248f5363790609d09.jar" />
+    </item>
+    <item
+        jar="C:\Users\Claudio Miranda\Aereo\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\Claudio Miranda\Aereo\app\build\intermediates\pre-dexed\debug\classes-8c4563b968034a1933f69ff170767bca6339034f.jar" />
+    </item>
+
+</items>

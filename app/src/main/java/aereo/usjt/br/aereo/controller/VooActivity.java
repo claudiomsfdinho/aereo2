@@ -1,4 +1,4 @@
-package aereo.usjt.br.aereo;
+package aereo.usjt.br.aereo.controller;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,13 +6,15 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
 import android.widget.ListView;
 
-import java.io.Serializable;
+import java.util.ArrayList;
 
- public class VooActivity extends ActionBarActivity {
+import aereo.usjt.br.aereo.R;
+import aereo.usjt.br.aereo.model.Voo;
+import aereo.usjt.br.aereo.adapter.VooAdapter;
+
+public class VooActivity extends ActionBarActivity {
      ListView listView;
     Activity atividade;
     public final static String VOO = "aereo.usjt.br.aereo.VOO";
@@ -24,34 +26,16 @@ import java.io.Serializable;
         setContentView(R.layout.activity_voo);
         atividade = this;
 
-        Controle controle = new Controle();
+
         //capturando a msg do intent
 
         Intent intent = getIntent();
-        String destino = intent.getStringExtra(MainActivity.DESTINO);
-        String origem = intent.getStringExtra(MainActivity.ORIGEM);
-        String modo = intent.getStringExtra(MainActivity.MODO);
+        voos = ((ArrayList<Voo>)intent.getSerializableExtra(MainActivity.VOOS)).toArray(new Voo[0]);
 
-        voos = controle.listarVoos(destino, origem).toArray(new Voo[0]);
-        String[] lista = null;
-
-        if(modo.equals(MainActivity.SIMPLES)) {
-            lista = new String[voos.length];
-
-            for (int i = 0; i < voos.length; i++) {
-                lista[i] = voos[i].getNome();
-            }
-        }
         //cria a lista de voos
         listView = (ListView) findViewById(R.id.view_lista_voo);
-        BaseAdapter adapter;
-        if(modo.equals(MainActivity.SIMPLES)) {
-            adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, lista);
-        } else {
-            adapter = new VooAdapter(this, voos);
-        }
+        VooAdapter adapter = new VooAdapter(this, voos);
         listView.setAdapter(adapter);
-
         // listener de click em um item do listView
 
 
@@ -61,9 +45,9 @@ import java.io.Serializable;
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
 
-                // manda para a tela de detalhe
+                // manda para a tela de completoVoo
                 Intent intent = new Intent(atividade, CompletoVooActivity.class);
-                intent.putExtra(VOO, (Serializable) voos[position]);
+                intent.putExtra(VOO, voos[position]);
 
                 startActivity(intent);
 

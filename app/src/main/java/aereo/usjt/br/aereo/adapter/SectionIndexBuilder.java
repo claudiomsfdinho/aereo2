@@ -1,8 +1,10 @@
-package aereo.usjt.br.aereo;
+package aereo.usjt.br.aereo.adapter;
 
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.TreeSet;
+
+import aereo.usjt.br.aereo.model.Voo;
 
 /**
  * Created by Claudio Miranda on 20/09/2015.

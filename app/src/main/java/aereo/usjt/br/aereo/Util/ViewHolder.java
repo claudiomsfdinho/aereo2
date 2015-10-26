@@ -1,4 +1,4 @@
-package aereo.usjt.br.aereo;
+package aereo.usjt.br.aereo.Util;
 
 import android.widget.ImageView;
 import android.widget.TextView;
